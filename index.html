@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Face Recognition Attendance</h1>
+        <div class="camera-section">
+            <video id="video" width="400" height="300" autoplay></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+        <div class="controls">
+            <button id="capture" class="btn">Capture Face</button>
+            <button id="submit" class="btn submit" disabled>Submit Attendance</button>
+        </div>
+        <div id="status" class="status"></div>
+        
+        <!-- Section to display captured face and details -->
+        <div id="attendanceDetails" style="display: none;">
+            <h2>Attendance Details</h2>
+            <img id="capturedPhoto" src="" alt="Captured Face" width="150" />
+            <p><strong>Name:</strong> <span id="employeeName"></span></p>
+            <p><strong>Employee ID:</strong> <span id="employeeId"></span></p>
+            <p><strong>Position:</strong> <span id="employeePosition"></span></p>
+            <!-- Add any other details here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
